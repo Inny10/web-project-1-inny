@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paulo Dybala - Questions</title>
-</head>
-<body style="text-align:center">
+  </head>
+  <body style="text-align: center">
     <header>
       <h1>
         <b><u>Questions</u></b>
@@ -14,46 +14,99 @@
         <i><u>Information Box</u></i>
       </h2>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="international-career.html">International Career</a></li>
-          <li><a href="Create-an-account.html">Create an Account</a></li>
-        </ul>
+        <form action="index.html">
+          <button type="submit">Home</button>
+        </form>
+        <br /><br />
+        <form action="international-career.html">
+          <button type="submit">International Career</button>
+        </form>
+        <br /><br />
+        <form action="Create-an-account.html">
+          <button type="submit">Create an Account</button>
+        </form>
       </nav>
     </header>
     <main>
+      <p>If you have any questions about Paulo Dybala, feel free to ask!</p>
       <p>
-        If you have any questions about Paulo Dybala, feel free to ask!
+        We will get back to you as soon as possible from the email you provided
+        on the Create an Account page.
       </p>
-      <p>
-        We will get back to you as soon as possible from the email you provided on the Create an Account page.
-      </p>
-      <form method="get"> 
+      <!--
+        The form tag creates an area for user input.
+        Necessary attributes include:
+        method- which defines how data that is put into the form is handled.
+        There are two possible values:
+        get- which displays all input at the end of the web address.
+        (NOTE: NOT GOOD FOR PRIVATE INFORMATION!!)
+        post, which handles all input by sending it to a back hand program
+    -->
+      <form method="get">
         <fieldset>
-    <legend>Questions?</legend>
-    <label for="First-Name">First Name:</label>
-    <input type="text" id="First-Name" name="First-Name" required>
-    <br>
-    <br>
-    <label for="Last-Name">Last Name:</label>
-    <input type="text" id="Last-Name" name="Last-Name" required>
-    <br />
-    <br />
-    <label for="Questions">Ask Your Questions:</label>
-    <br />
-    <textarea id="Questions" name="Questions" rows="20" cols="100"></textarea>
-    <br />
-    <br />
-    <!--When you click the submit button, it will show an alert, and you have to press OK, and then it will redirect to the Home page-->
-    <a href="index.html">
-    <input type="button" value="Submit Form" onclick="alert('Form Submitted!')"/>
-    </a>
-    <br />
-    <br />
-    <br />
-    <input type="reset" id="reset-button" name="reset" value="Reset Form" />
+          <legend>Questions?</legend>
+          <!--
+      The label tag is used to explain what input is expected from the input that immediately follows or is right before the label.
+      Important attributes include:
+      for, which links to the ID of the input the label is for.
+    -->
+          <!--
+      The input tag creates the actual element that user will type their information into.
+      Necessasry attributes include:
+      type, which states what type input it is.
+      Examples: text, tel, password,email, button, checkbox, etc.
+      id, which give the input and identifying name differnet from other inputs.
+      name, which gives a variable for how to store this information in the search bar or on the back-end.
+      Important attributes include:
+      required, which forces a user to have to enter input in the input.
+    -->
+          <label for="First-Name">First Name:</label>
+          <input type="text" id="First-Name" name="First-Name" required />
+          <br />
+          <br />
+          <label for="Last-Name">Last Name:</label>
+          <input type="text" id="Last-Name" name="Last-Name" required />
+          <br />
+          <br />
+          <label for="Questions">Ask Your Questions:</label>
+          <br />
+          <!--
+        The textarea tag creates a larger textbox input for users to
+        type full sentences in. rows, which defines how many rows tall the textbox is.
+        cols, which defines how many columns wide the textbox is.
+      -->
+          <textarea
+            id="Questions"
+            name="Questions"
+            rows="20"
+            cols="100"
+          ></textarea>
+          <br />
+          <br />
+          <!--
+        The submit input creates an input that allows a user to submit the form data.
+        Necessary attributes include:
+        type, which defines what kind of input it is.
+        for a reset button, the value mut be "reset".
+        id, which gives the input an unique identifier inside the form.
+      -->
+          <input
+            type="submit"
+            id="submit-button"
+            name="Submit"
+            formaction="index.html"
+            value="Submit Form"
+          />
+          <br />
+          <br />
+          <input
+            type="reset"
+            id="reset-button"
+            name="reset"
+            value="Reset Form"
+          />
         </fieldset>
-        </form>
+      </form>
     </main>
-</body>
+  </body>
 </html>

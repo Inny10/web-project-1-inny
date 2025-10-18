@@ -1,68 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create an Account</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>
-            <b><u>Create an Account</u></b>
-        </h1>
-        <p style= text-align:center>
-            <strong><u>Once you create an account and you click submit, it will say "Account Created Successfully". Then click ok and it will take you to the questions page where you can ask us questions about Paulo Dybala.</u></strong>
-        </p>
-    <nav>
-        <a href="index.html">
-        <input type="button" value="Home"/>
-        </a>
-        <a href="international-career.html">
-        <input type="button" value="international-career"/>
-        </a>
-        <a href="Create-an-account.html">
-        <input type="button" value="Create-an-account"/>
-        </a>
-    </nav>
+      <h1>
+        <b><u>Create an Account</u></b>
+      </h1>
+      <p style="text-align: center">
+        <strong
+          ><u
+            >Once you create an account and you click submit, it will take you
+            to the questions page where you can ask us questions about Paulo
+            Dybala.</u
+          ></strong
+        >
+      </p>
+      <nav>
+        <form action="index.html">
+          <button type="submit">Home</button>
+        </form>
+        <br /><br />
+        <form action="international-career.html">
+          <button type="submit">International Career</button>
+        </form>
+        <br /><br />
+        <form action="Create-an-account.html">
+          <button type="submit">Create an Account</button>
+        </form>
+      </nav>
+      <br />
+      <br />
     </header>
     <main>
-        <form method="get"> 
-            <fieldset>
-        <legend>Account Information</legend>
-            <label for="Username">Username:</label>
-    <input type="text" id="Username" name="Username" required>
-    <br />
-    <br />
-    <label for="Password">Password:</label>
-    <input type="password" id="Password" name="Password" required>
-    <br />
-    <br />
-    <label for="Repeat Password">Repeat Password:</label>
-    <input type="password" id="Repeat Password" name="Repeat Password" required>
-    <br />
-    <br />
-    <label for="Email">Email:</label>
-    <input type="email" id="Email" name="Email" required>
-    <br />
-    <br />
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required/>
-    <br />
-    <br />
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required />
-    <br />
-    <br />
-    <!--When you click the submit button, it will show an alert, and then you have to press ok, and then it will redirect to the questions page-->
-    <a href="questions.html">
-    <input type="button" value="Submit Form" onclick="alert('Account Created Successfully')" />
-    </a>
-    <br />
-    <br />
-    <br />
-    <input type="reset" id="reset-button" name="reset" value="Reset Form" />
+      <!--
+        The form tag creates an area for user input.
+        Necessary attributes include:
+        method- which defines how data that is put into the form is handled.
+        There are two possible values:
+        get- which displays all input at the end of the web address.
+        (NOTE: NOT GOOD FOR PRIVATE INFORMATION!!)
+        post, which handles all input by sending it to a back hand program
+    -->
+      <form method="get">
+        <fieldset>
+          <legend>Account Information</legend>
+          <!--
+        The label tag is used to explain what input is expected from the input that immediately follows or is right before the label.
+        Important attributes include:
+        for, which links to the ID of the input the label is for.
+    -->
+          <!--
+        The input tag creates the actual element that user will type their information into.
+        Necessasry attributes include:
+        type, which states what type input it is.
+        Examples: text, tel, password,email, button, checkbox, etc.
+        id, which give the input and identifying name differnet from other inputs.
+        name, which gives a variable for how to store this information in the search bar or on the back-end.
+        Important attributes include:
+        required, which forces a user to have to enter input in the input.
+    -->
+          <label for="Username">Username:</label>
+          <input type="text" id="Username" name="Username" required />
+          <br />
+          <br />
+          <label for="Password">Password:</label>
+          <input type="password" id="Password" name="Password" required />
+          <br />
+          <br />
+          <label for="Repeat Password">Repeat Password:</label>
+          <input
+            type="password"
+            id="Repeat Password"
+            name="Repeat Password"
+            required
+          />
+          <br />
+          <br />
+          <label for="Email">Email:</label>
+          <input type="email" id="Email" name="Email" required />
+          <br />
+          <br />
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <br />
+          <br />
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <br />
+          <br />
+          <!--
+        The submit input creates an input that allows a user to submit the form data.
+        Necessary attributes include:
+        type, which defines what kind of input it is.
+        for a reset button, the value mut be "reset".
+        id, which gives the input an unique identifier inside the form.
+      -->
+          <input
+            type="submit"
+            id="submit-button"
+            name="Submit"
+            formaction="questions.html"
+            value="Submit Form"
+          />
+          <br />
+          <br />
+          <br />
+          <!--The reset input creates an input that allows a user to clears all inputs in the form to their default values.-->
+          <input
+            type="reset"
+            id="reset-button"
+            name="reset"
+            value="Reset Form"
+          />
         </fieldset>
-        </form>
+      </form>
     </main>
-</body>
+  </body>
 </html>
