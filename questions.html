@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paulo Dybala - Questions</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body style="text-align: center">
     <header>
@@ -125,8 +126,35 @@
             name="reset"
             value="Reset Form"
           />
+          <br />
+          <br />
+          <label for="Rate Us">Rate Us:</label>
+          <select id="Rate Us" name="Rate Us" required>
+            <!--
+        The select tag creates a drop-down menu input.
+        Necessary attributes include:
+        id, which includes the input an unique identifier inside the form.
+        name, which gives a variable for how to store this information.
+      -->
+
+            <!--
+          The option tag creates the individual options inside the drop-down menu.
+        -->
+            <option value="">Select...</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
         </fieldset>
       </form>
+      <p>
+        <strong
+          ><u>Disclaimer:</u> This website does not collect any information from
+          users. It is only for demonstration purposes.</strong
+        >
+      </p>
     </main>
   </body>
 </html>
